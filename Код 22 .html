@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристик: юные туристы и краеведы - Хангаласский улус</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Times New Roman', Times, serif; }
+
+        /* ===== СЕВЕРНОЕ СИЯНИЕ — 3D ПЕРЕЛИВАЮЩИЙСЯ ФОН ===== */
+        body {
+            color: #2d3e3a;
+            min-height: 100vh;
+            background-color: #030a1a;
+            background-image:
+                radial-gradient(ellipse 80% 50% at 20% 20%, rgba(0, 255, 170, 0.45) 0%, transparent 60%),
+                radial-gradient(ellipse 70% 45% at 75% 15%, rgba(0, 220, 255, 0.35) 0%, transparent 60%),
+                radial-gradient(ellipse 90% 55% at 50% 35%, rgba(80, 255, 200, 0.3) 0%, transparent 65%),
+                radial-gradient(ellipse 60% 40% at 10% 55%, rgba(120, 0, 255, 0.3) 0%, transparent 60%),
+                radial-gradient(ellipse 75% 50% at 85% 60%, rgba(180, 60, 255, 0.28) 0%, transparent 60%),
+                radial-gradient(ellipse 65% 45% at 40% 75%, rgba(0, 200, 255, 0.25) 0%, transparent 60%),
+                radial-gradient(ellipse 70% 45% at 65% 90%, rgba(0, 255, 140, 0.22) 0%, transparent 60%),
+                radial-gradient(1.5px 1.5px at 20px 30px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 80px 90px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1.5px 1.5px at 140px 50px, rgba(255,255,255,0.85), transparent),
+                radial-gradient(1px 1px at 200px 120px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1.5px 1.5px at 260px 70px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 320px 150px, rgba(255,255,255,0.65), transparent),
+                radial-gradient(1.5px 1.5px at 380px 40px, rgba(255,255,255,0.85), transparent),
+                radial-gradient(1px 1px at 440px 180px, rgba(255,255,255,0.7), transparent),
+                linear-gradient(180deg, #020818 0%, #061530 25%, #0a1f45 50%, #0d2a52 70%, #0a1a35 100%);
+            background-size:
+                200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+                250px 250px, 250px 250px, 250px 250px, 250px 250px, 250px 250px, 250px 250px, 250px 250px, 250px 250px,
+                100% 100%;
+            background-attachment: fixed;
+            background-repeat:
+                no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+                repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                no-repeat;
+            animation: auroraWave 18s ease-in-out infinite alternate;
+        }
+        @keyframes auroraWave {
+            0% {
+                background-position:
+                    0% 0%, 100% 0%, 50% 30%, 0% 60%, 100% 60%, 40% 80%, 60% 100%,
+                    0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            }
+            50% {
+                background-position:
+                    30% 20%, 70% 15%, 60% 45%, 20% 50%, 80% 70%, 50% 85%, 40% 90%,
+                    50px 50px, 50px 50px, 50px 50px, 50px 50px, 50px 50px, 50px 50px, 50px 50px, 50px 50px,
+                    0 0;
+            }
+            100% {
+                background-position:
+                    60% 30%, 30% 25%, 40% 55%, 40% 40%, 60% 80%, 60% 70%, 20% 80%,
+                    100px 100px, 100px 100px, 100px 100px, 100px 100px, 100px 100px, 100px 100px, 100px 100px, 100px 100px,
+                    0 0;
+            }
+        }
+
+        /* ===== ВЕРХНЯЯ ПАНЕЛЬ ===== */
+        .top-panel {
+            padding: 15px 0;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border-bottom: 3px solid #6ee7b7;
+            background: linear-gradient(120deg, #0a1f45, #0d3a5c, #0a6b5c, #0a8f6e, #0a6b5c, #0d3a5c, #0a1f45);
+            background-size: 400% 400%;
+            animation: gradientShift 12s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .top-panel h1 {
+            color: #a7f3d0;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(110,231,183,0.7), 2px 2px 6px rgba(0,0,0,0.7);
+            letter-spacing: 2px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .marquee-container { display: flex; gap: 20px; animation: scroll-left 25s linear infinite; width: max-content; }
+        .marquee-container:hover { animation-play-state: paused; }
+        .marquee-item {
+            background: rgba(110,231,183,0.12);
+            border-radius: 12px;
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            color: #a7f3d0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(110,231,183,0.4);
+            transition: transform 0.3s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .marquee-item:hover { transform: scale(1.05); background: rgba(110,231,183,0.22); }
+        .marquee-item .emoji-big {
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            color: #6ee7b7;
+            filter: drop-shadow(0 0 8px rgba(110,231,183,0.8));
+        }
+        @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+        /* ===== КОНТЕНТ ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #a7f3d0;
+            margin: 30px 0 20px;
+            position: relative;
+            text-shadow: 0 0 15px rgba(110,231,183,0.6), 0 2px 10px rgba(0,0,0,0.8);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #6ee7b7, #a78bfa, #6ee7b7);
+            margin: 10px auto 0;
+            border-radius: 2px;
+            box-shadow: 0 0 12px rgba(110,231,183,0.8);
+        }
+
+        /* ===== ГАЛЕРЕЯ ===== */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
+        .card {
+            background: rgba(10, 31, 69, 0.88);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(110,231,183,0.25);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(110,231,183,0.3);
+            backdrop-filter: blur(6px);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 0 1px rgba(110,231,183,0.5), 0 0 25px rgba(110,231,183,0.3);
+        }
+        .card-header {
+            background: linear-gradient(135deg, #0a6b5c, #0d3a5c);
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-number {
+            background: #6ee7b7;
+            color: #020818;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .card-header .btn-delete {
+            background: rgba(167,243,208,0.2);
+            border: none;
+            color: #a7f3d0;
+            cursor: pointer;
+            font-size: 1.2rem;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: background 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .card-header .btn-delete:hover { background: #f0abfc; color: #020818; }
+        .photo-area {
+            width: 100%;
+            height: 200px;
+            background: rgba(6, 21, 48, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px dashed rgba(110,231,183,0.5);
+            transition: background 0.3s;
+        }
+        .photo-area:hover { background: rgba(10, 40, 80, 0.9); }
+        .photo-area img { width: 100%; height: 100%; object-fit: cover; }
+        .photo-area .placeholder-icon { text-align: center; color: #6ee7b7; font-family: 'Times New Roman', Times, serif; }
+        .photo-area .placeholder-icon span { font-size: 2.5rem; display: block; color: #6ee7b7; filter: drop-shadow(0 0 10px rgba(110,231,183,0.7)); }
+        .photo-area .placeholder-icon p { font-size: 0.85rem; margin-top: 5px; color: #a7f3d0; }
+        .photo-area input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+        .card-body { padding: 15px; }
+        .card-body textarea {
+            width: 100%;
+            min-height: 80px;
+            border: 1px solid rgba(110,231,183,0.4);
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 0.95rem;
+            resize: vertical;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background: rgba(3, 10, 26, 0.7);
+            color: #a7f3d0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .card-body textarea:focus {
+            outline: none;
+            border-color: #6ee7b7;
+            box-shadow: 0 0 0 3px rgba(110,231,183,0.2), 0 0 15px rgba(110,231,183,0.3);
+        }
+        .card-body label { font-size: 0.8rem; color: #a7f3d0; display: block; margin-bottom: 6px; font-weight: 600; font-family: 'Times New Roman', Times, serif; }
+
+        .add-btn-container { text-align: center; margin: 30px 0; }
+        .btn-add {
+            background: linear-gradient(135deg, #0a6b5c, #0a8f6e);
+            color: #a7f3d0;
+            border: 1px solid #6ee7b7;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 20px rgba(110,231,183,0.3);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .btn-add:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 30px rgba(110,231,183,0.6); }
+
+        /* ===== КАРТА ===== */
+        .map-section {
+            background: rgba(10, 31, 69, 0.9);
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 40px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.5), 0 0 0 1px rgba(110,231,183,0.25);
+            border: 1px solid rgba(110,231,183,0.3);
+            backdrop-filter: blur(6px);
+        }
+        .map-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(3, 10, 26, 0.7);
+            border-radius: 12px;
+            border: 1px solid rgba(110,231,183,0.25);
+        }
+        .map-controls label { font-weight: 600; color: #a7f3d0; font-size: 0.95rem; font-family: 'Times New Roman', Times, serif; }
+        .map-controls input[type="file"] {
+            padding: 8px 12px;
+            border: 1px solid rgba(110,231,183,0.4);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: rgba(6, 21, 48, 0.9);
+            color: #a7f3d0;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* ===== ВЫПАДАЮЩИЙ СПИСОК ДОСТОПРИМЕЧАТЕЛЬНОСТЕЙ ===== */
+        .sight-dropdown { position: relative; display: inline-block; }
+        .sight-dropdown-btn {
+            background: #0a8f6e;
+            color: #a7f3d0;
+            border: 1px solid #6ee7b7;
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sight-dropdown-btn:hover { background: #0ab386; box-shadow: 0 0 15px rgba(110,231,183,0.5); }
+        .sight-dropdown-btn .caret { font-size: 0.7rem; transition: transform 0.25s; }
+        .sight-dropdown.open .sight-dropdown-btn .caret { transform: rotate(180deg); }
+        .sight-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            min-width: 290px;
+            background: rgba(6, 21, 48, 0.98);
+            border: 1px solid #6ee7b7;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6), 0 0 20px rgba(110,231,183,0.3);
+            z-index: 50;
+            overflow: hidden;
+            backdrop-filter: blur(6px);
+        }
+        .sight-dropdown.open .sight-dropdown-menu { display: block; }
+        .sight-dropdown-menu .sight-option {
+            padding: 10px 15px;
+            color: #a7f3d0;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.9rem;
+            transition: background 0.15s, color 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sight-dropdown-menu .sight-option:hover { background: rgba(110,231,183,0.18); color: #fff; }
+        .sight-dropdown-menu .sight-option.selected { background: rgba(110,231,183,0.28); color: #fff; font-weight: 600; }
+        .sight-dropdown-menu .sight-option .opt-icon { color: #6ee7b7; filter: drop-shadow(0 0 6px rgba(110,231,183,0.7)); }
+
+        .map-controls .btn-map-add {
+            background: #0a8f6e;
+            color: #a7f3d0;
+            border: 1px solid #6ee7b7;
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .map-controls .btn-map-add:hover { background: #0ab386; transform: scale(1.03); box-shadow: 0 0 15px rgba(110,231,183,0.5); }
+        .map-controls .btn-map-add.active { background: #a78bfa; color: #020818; border-color: #c4b5fd; animation: pulse 1.2s infinite; }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(167,139,250,0.6); }
+            50% { box-shadow: 0 0 0 10px rgba(167,139,250,0); }
+        }
+        .map-controls .btn-map-remove {
+            background: #7c3aed;
+            color: #e9d5ff;
+            border: 1px solid #a78bfa;
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .map-controls .btn-map-remove:hover:not(:disabled) { background: #6d28d9; transform: scale(1.03); box-shadow: 0 0 15px rgba(167,139,250,0.5); }
+        .map-controls .btn-map-remove:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        .map-container { width: 100%; height: 500px; border-radius: 16px; overflow: hidden; border: 3px solid #6ee7b7; background: #0a1f45; box-shadow: 0 0 25px rgba(110,231,183,0.3); }
+        .map-hint {
+            display: none;
+            margin-bottom: 12px;
+            padding: 10px 15px;
+            background: rgba(110,231,183,0.15);
+            border: 1px solid #6ee7b7;
+            border-radius: 8px;
+            color: #a7f3d0;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .map-hint.show { display: block; }
+
+        /* ===== ПАНЕЛЬ СО ССЫЛКОЙ (под картой) ===== */
+        .link-panel {
+            margin-top: 30px;
+            background: linear-gradient(135deg, rgba(10, 107, 92, 0.5), rgba(124, 58, 237, 0.35));
+            border: 1px solid #6ee7b7;
+            border-radius: 16px;
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 0 25px rgba(110,231,183,0.3), 0 4px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(6px);
+        }
+        .link-panel-text {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex: 1;
+            min-width: 260px;
+        }
+        .link-panel-icon {
+            font-size: 2.2rem;
+            color: #6ee7b7;
+            filter: drop-shadow(0 0 10px rgba(110,231,183,0.8));
+            flex-shrink: 0;
+        }
+        .link-panel-info .link-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6ee7b7;
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .link-panel-info .link-title {
+            font-size: 1.15rem;
+            color: #e9d5ff;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 0 0 10px rgba(167,139,250,0.4);
+        }
+        .link-panel-btn {
+            background: #0a8f6e;
+            color: #a7f3d0;
+            border: 1px solid #6ee7b7;
+            padding: 12px 26px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .link-panel-btn:hover {
+            background: #0ab386;
+            transform: scale(1.04);
+            box-shadow: 0 0 20px rgba(110,231,183,0.6);
+        }
+
+        /* ===== ПАНЕЛЬ АВТОРОВ ПРОЕКТА ===== */
+        .authors-panel {
+            margin-top: 30px;
+            background: rgba(10, 31, 69, 0.9);
+            border-radius: 20px;
+            padding: 25px 30px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.5), 0 0 0 1px rgba(167,139,250,0.35);
+            border: 1px solid rgba(167,139,250,0.4);
+            backdrop-filter: blur(6px);
+            position: relative;
+            overflow: hidden;
+        }
+        .authors-panel::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #6ee7b7, #a78bfa, #f0abfc, #a78bfa, #6ee7b7);
+            background-size: 200% 100%;
+            animation: gradientShift 6s linear infinite;
+        }
+        .authors-panel h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #a7f3d0;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(167,139,250,0.6), 0 2px 8px rgba(0,0,0,0.7);
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+        }
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .author-card {
+            background: rgba(6, 21, 48, 0.75);
+            border: 1px solid rgba(110,231,183,0.3);
+            border-radius: 14px;
+            padding: 18px 20px;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .author-card:hover {
+            transform: translateY(-3px);
+            border-color: #a78bfa;
+            box-shadow: 0 0 25px rgba(167,139,250,0.35);
+        }
+        .author-card .author-role {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6ee7b7;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .author-card .author-role .role-icon {
+            font-size: 1.2rem;
+            filter: drop-shadow(0 0 8px rgba(110,231,183,0.7));
+        }
+        .author-card .author-name {
+            font-size: 1.15rem;
+            color: #e9d5ff;
+            font-weight: 600;
+            line-height: 1.4;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 0 0 10px rgba(167,139,250,0.4);
+        }
+        .author-card .author-sub {
+            font-size: 0.85rem;
+            color: #c4b5fd;
+            margin-top: 6px;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.4;
+        }
+        .author-card .author-icon-big {
+            position: absolute;
+            right: 12px;
+            bottom: 8px;
+            font-size: 2.8rem;
+            opacity: 0.15;
+            color: #6ee7b7;
+            pointer-events: none;
+        }
+        .org-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(10, 107, 92, 0.5), rgba(124, 58, 237, 0.35));
+            border: 1px solid #6ee7b7;
+            border-radius: 14px;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 0 20px rgba(110,231,183,0.2);
+        }
+        .org-card .org-icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            flex-shrink: 0;
+            filter: drop-shadow(0 0 10px rgba(110,231,183,0.8));
+            border-radius: 50%;
+        }
+        .org-card .org-info .org-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6ee7b7;
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .org-card .org-info .org-name {
+            font-size: 1.1rem;
+            color: #e9d5ff;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 0 0 10px rgba(167,139,250,0.4);
+        }
+
+        /* ===== СЕКЦИЯ ВИКТОРИНЫ И ПОДБОРА ТУРА (2 колонки) ===== */
+        .activity-panel {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .activity-col {
+            background: rgba(10, 31, 69, 0.9);
+            border-radius: 20px;
+            padding: 22px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.5), 0 0 0 1px rgba(110,231,183,0.3);
+            border: 1px solid rgba(110,231,183,0.35);
+            backdrop-filter: blur(6px);
+            position: relative;
+            overflow: hidden;
+        }
+        .activity-col::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #6ee7b7, #a78bfa, #f0abfc, #a78bfa, #6ee7b7);
+            background-size: 200% 100%;
+            animation: gradientShift 6s linear infinite;
+        }
+        .activity-col h2 {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #a7f3d0;
+            margin-bottom: 18px;
+            text-shadow: 0 0 15px rgba(167,139,250,0.6), 0 2px 8px rgba(0,0,0,0.7);
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+        }
+
+        /* ===== ВИКТОРИНА ===== */
+        .quiz-progress {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #c4b5fd;
+            margin-bottom: 12px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .quiz-question {
+            background: rgba(6, 21, 48, 0.75);
+            border: 1px solid rgba(110,231,183,0.3);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+        .quiz-question .q-text {
+            font-size: 1rem;
+            color: #e9d5ff;
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.4;
+        }
+        .quiz-question .q-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            background: rgba(10, 40, 80, 0.7);
+            border: 1px solid rgba(110,231,183,0.25);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.92rem;
+            color: #a7f3d0;
+        }
+        .quiz-option:hover { background: rgba(110,231,183,0.15); border-color: #6ee7b7; }
+        .quiz-option .opt-letter {
+            background: #0a8f6e;
+            color: #a7f3d0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .quiz-option.correct { background: rgba(110,231,183,0.25); border-color: #6ee7b7; }
+        .quiz-option.correct .opt-letter { background: #6ee7b7; color: #020818; }
+        .quiz-option.wrong { background: rgba(230,57,70,0.2); border-color: #e63946; }
+        .quiz-option.wrong .opt-letter { background: #e63946; color: #fff; }
+        .quiz-option.disabled { pointer-events: none; opacity: 0.85; }
+        .quiz-result {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(10, 107, 92, 0.5), rgba(124, 58, 237, 0.35));
+            border: 1px solid #6ee7b7;
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 12px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .quiz-result .res-score {
+            font-size: 1.6rem;
+            color: #6ee7b7;
+            font-weight: 700;
+            text-shadow: 0 0 12px rgba(110,231,183,0.7);
+            margin-bottom: 6px;
+        }
+        .quiz-result .res-text {
+            font-size: 0.95rem;
+            color: #c4b5fd;
+            margin-bottom: 12px;
+        }
+        .quiz-reset-btn {
+            background: #0a8f6e;
+            color: #a7f3d0;
+            border: 1px solid #6ee7b7;
+            padding: 9px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .quiz-reset-btn:hover { background: #0ab386; transform: scale(1.04); box-shadow: 0 0 15px rgba(110,231,183,0.6); }
+
+        /* ===== ПОДБОР ТУРИСТИЧЕСКОГО ПРОДУКТА ===== */
+        .tour-desc {
+            font-size: 0.85rem;
+            color: #c4b5fd;
+            margin-bottom: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .tour-section {
+            background: rgba(6, 21, 48, 0.75);
+            border: 1px solid rgba(110,231,183,0.3);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .tour-section:hover { border-color: #6ee7b7; box-shadow: 0 0 15px rgba(110,231,183,0.2); }
+        .tour-section-header {
+            padding: 11px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+            color: #a7f3d0;
+            font-size: 0.92rem;
+            background: rgba(10, 40, 80, 0.6);
+            transition: background 0.2s;
+        }
+        .tour-section-header:hover { background: rgba(10, 40, 80, 0.85); }
+        .tour-section-header .tour-sec-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tour-section-header .tour-sec-icon {
+            font-size: 1.15rem;
+            filter: drop-shadow(0 0 6px rgba(110,231,183,0.6));
+        }
+        .tour-section-header .tour-arrow {
+            font-size: 0.75rem;
+            color: #6ee7b7;
+            transition: transform 0.3s;
+        }
+        .tour-section.open .tour-arrow { transform: rotate(90deg); }
+        .tour-section-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 14px;
+        }
+        .tour-section.open .tour-section-body {
+            max-height: 600px;
+            padding: 10px 14px 14px;
+        }
+        .tour-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            background: rgba(10, 40, 80, 0.6);
+            border: 1px solid rgba(110,231,183,0.2);
+            border-radius: 8px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.85rem;
+            color: #a7f3d0;
+        }
+        .tour-item:hover { background: rgba(110,231,183,0.12); border-color: rgba(110,231,183,0.5); }
+        .tour-item.selected {
+            background: rgba(110,231,183,0.22);
+            border-color: #6ee7b7;
+            box-shadow: 0 0 10px rgba(110,231,183,0.3);
+        }
+        .tour-item .tour-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 2px solid #6ee7b7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: transparent;
+            transition: background 0.2s, color 0.2s;
+        }
+        .tour-item.selected .tour-check {
+            background: #6ee7b7;
+            color: #020818;
+        }
+        .tour-item .tour-item-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .tour-item .tour-item-name {
+            font-weight: 600;
+            color: #e9d5ff;
+            font-size: 0.85rem;
+            line-height: 1.3;
+        }
+        .tour-item .tour-item-price {
+            color: #6ee7b7;
+            font-size: 0.78rem;
+            margin-top: 2px;
+        }
+        .tour-result {
+            margin-top: 16px;
+            background: linear-gradient(135deg, rgba(10, 107, 92, 0.5), rgba(124, 58, 237, 0.35));
+            border: 1px solid #6ee7b7;
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .tour-result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .tour-result-row:last-child { margin-bottom: 0; }
+        .tour-result-label {
+            color: #c4b5fd;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .tour-result-value {
+            color: #6ee7b7;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(110,231,183,0.6);
+        }
+        .tour-reset-btn {
+            background: #7c3aed;
+            color: #e9d5ff;
+            border: 1px solid #a78bfa;
+            padding: 9px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+            width: 100%;
+            margin-top: 12px;
+        }
+        .tour-reset-btn:hover { background: #6d28d9; transform: scale(1.02); box-shadow: 0 0 15px rgba(167,139,250,0.5); }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background: rgba(3, 10, 26, 0.92);
+            color: #a7f3d0;
+            font-size: 0.9rem;
+            backdrop-filter: blur(4px);
+            border-top: 1px solid rgba(110,231,183,0.3);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        footer span { color: #6ee7b7; }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #0a6b5c;
+            color: #a7f3d0;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5), 0 0 20px rgba(110,231,183,0.4);
+            opacity: 0;
+            transition: all 0.4s;
+            z-index: 1000;
+            border: 1px solid #6ee7b7;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+        /* ===== АЛЬБОМ ДЕТЕЙ ===== */
+        .kids-album {
+            position: fixed;
+            top: 140px;
+            left: 20px;
+            z-index: 998;
+            width: 250px;
+            background: rgba(10, 31, 69, 0.94);
+            border-radius: 14px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.5), 0 0 0 1px rgba(167,139,250,0.3);
+            border: 2px solid #a78bfa;
+            overflow: hidden;
+            transition: width 0.3s ease;
+            backdrop-filter: blur(6px);
+        }
+        .kids-album.collapsed { width: 56px; }
+        .kids-album-header {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: #e9d5ff;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .kids-album-header .title { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .kids-album-header .toggle-icon { font-size: 1rem; transition: transform 0.3s; color: #c4b5fd; }
+        .kids-album.collapsed .kids-album-header .title span:last-child { display: none; }
+        .kids-album.collapsed .kids-album-header { padding: 10px; justify-content: center; }
+        .kids-album.collapsed .toggle-icon { transform: rotate(180deg); }
+        .kids-album-body { padding: 12px; max-height: 420px; overflow-y: auto; transition: max-height 0.3s ease, padding 0.3s ease; }
+        .kids-album.collapsed .kids-album-body { max-height: 0; padding: 0 12px; overflow: hidden; }
+        .kids-album-body .album-upload-btn {
+            width: 100%;
+            background: #0a8f6e;
+            color: #a7f3d0;
+            border: 1px solid #6ee7b7;
+            padding: 9px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .kids-album-body .album-upload-btn:hover { background: #0ab386; transform: scale(1.02); box-shadow: 0 0 15px rgba(110,231,183,0.5); }
+        .kids-photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+        .kids-photo { position: relative; aspect-ratio: 1; border-radius: 8px; overflow: hidden; border: 1px solid rgba(167,139,250,0.4); background: rgba(6, 21, 48, 0.9); }
+        .kids-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .kids-photo .btn-remove-kid {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            background: rgba(167,139,250,0.9);
+            color: #020818;
+            border: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 0.65rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .kids-photo:hover .btn-remove-kid { opacity: 1; }
+        .kids-empty { text-align: center; font-size: 0.78rem; color: #a7f3d0; padding: 15px 0; grid-column: 1 / -1; font-family: 'Times New Roman', Times, serif; }
+        .kids-album-body .album-count { font-size: 0.75rem; color: #c4b5fd; text-align: center; margin-bottom: 8px; font-family: 'Times New Roman', Times, serif; }
+
+        /* ===== МОДУЛИ ===== */
+        .modules-panel {
+            position: fixed;
+            top: 140px;
+            right: 20px;
+            z-index: 998;
+            width: 290px;
+            background: rgba(10, 31, 69, 0.94);
+            border-radius: 14px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.5), 0 0 0 1px rgba(110,231,183,0.3);
+            border: 2px solid #6ee7b7;
+            overflow: hidden;
+            transition: width 0.3s ease;
+            backdrop-filter: blur(6px);
+        }
+        .modules-panel.collapsed { width: 56px; }
+        .modules-panel-header {
+            background: linear-gradient(135deg, #0a6b5c, #0d3a5c);
+            color: #a7f3d0;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .modules-panel-header .title { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .modules-panel-header .toggle-icon { font-size: 1rem; transition: transform 0.3s; color: #6ee7b7; }
+        .modules-panel.collapsed .modules-panel-header .title span:last-child { display: none; }
+        .modules-panel.collapsed .modules-panel-header { padding: 10px; justify-content: center; }
+        .modules-panel.collapsed .toggle-icon { transform: rotate(180deg); }
+        .modules-panel-body { padding: 10px; max-height: 480px; overflow-y: auto; transition: max-height 0.3s ease, padding 0.3s ease; }
+        .modules-panel.collapsed .modules-panel-body { max-height: 0; padding: 0 10px; overflow: hidden; }
+        .modules-panel-body .info { font-size: 0.75rem; color: #a7f3d0; text-align: center; margin-bottom: 10px; font-family: 'Times New Roman', Times, serif; }
+        .module-item {
+            background: rgba(6, 21, 48, 0.8);
+            border: 1px solid rgba(110,231,183,0.3);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .module-item:hover { border-color: #6ee7b7; box-shadow: 0 0 15px rgba(110,231,183,0.25); }
+        .module-header {
+            padding: 9px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #a7f3d0;
+            user-select: none;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .module-header .module-title { display: flex; align-items: center; gap: 6px; }
+        .module-header .module-arrow { transition: transform 0.3s; font-size: 0.75rem; color: #6ee7b7; }
+        .module-item.open .module-header .module-arrow { transform: rotate(90deg); }
+        .module-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 12px; }
+        .module-item.open .module-body { max-height: 400px; padding: 0 12px 10px; }
+        .module-body .module-desc { font-size: 0.75rem; color: #c4b5fd; margin-bottom: 8px; line-height: 1.4; font-family: 'Times New Roman', Times, serif; }
+        .module-materials { display: flex; flex-direction: column; gap: 5px; margin-bottom: 8px; }
+        .material-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 8px;
+            background: rgba(10, 40, 80, 0.7);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            border: 1px solid rgba(110,231,183,0.25);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .material-item .mat-icon { font-size: 0.9rem; color: #6ee7b7; filter: drop-shadow(0 0 5px rgba(110,231,183,0.6)); }
+        .material-item .mat-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #a7f3d0; }
+        .material-item .mat-actions { display: flex; gap: 4px; }
+        .material-item .mat-btn {
+            background: #0a8f6e;
+            color: #a7f3d0;
+            border: none;
+            border-radius: 5px;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, box-shadow 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .material-item .mat-btn:hover { background: #0ab386; box-shadow: 0 0 10px rgba(110,231,183,0.5); }
+        .material-item .mat-btn.danger { background: #7c3aed; color: #e9d5ff; }
+        .material-item .mat-btn.danger:hover { background: #6d28d9; box-shadow: 0 0 10px rgba(167,139,250,0.5); }
+        .module-upload { display: flex; gap: 5px; align-items: center; }
+        .module-upload input[type="file"] {
+            flex: 1;
+            font-size: 0.7rem;
+            padding: 4px;
+            border: 1px dashed rgba(110,231,183,0.5);
+            border-radius: 6px;
+            background: rgba(3, 10, 26, 0.7);
+            cursor: pointer;
+            color: #a7f3d0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .module-upload .btn-up {
+            background: #0a6b5c;
+            color: #a7f3d0;
+            border: 1px solid #6ee7b7;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            white-space: nowrap;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .module-upload .btn-up:hover { background: #0a8f6e; box-shadow: 0 0 12px rgba(110,231,183,0.4); }
+
+        @media (max-width: 1200px) {
+            .kids-album, .modules-panel { display: none; }
+        }
+        @media (max-width: 900px) {
+            .activity-panel { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .top-panel h1 { font-size: 1.3rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .map-controls { flex-direction: column; align-items: stretch; }
+            .map-container { height: 350px; }
+            .authors-panel { padding: 18px; }
+            .org-card { flex-direction: column; text-align: center; }
+            .link-panel { flex-direction: column; text-align: center; }
+            .link-panel-text { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-panel">
+        <h1>🏕️ Туристик: юные туристы и краеведы 🏕️</h1>
+        <div class="marquee-container" id="marquee"></div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">📸 Достопримечательности Хангаласского улуса</h2>
+        <div class="gallery-grid" id="gallery"></div>
+        <div class="add-btn-container">
+            <button class="btn-add" onclick="addCard()">➕ Добавить фото</button>
+        </div>
+
+        <section class="map-section">
+            <h2 class="section-title" style="color:#a7f3d0;">🗺️ Карта Хангаласского улуса</h2>
+
+            <div class="map-controls">
+                <div class="sight-dropdown" id="sightDropdown">
+                    <button class="sight-dropdown-btn" onclick="toggleSightDropdown(event)">
+                        <span>🏛️</span>
+                        <span id="sightBtnLabel">Достопримечательности</span>
+                        <span class="caret">▼</span>
+                    </button>
+                    <div class="sight-dropdown-menu" id="sightDropdownMenu"></div>
+                </div>
+
+                <label for="markerPhoto">Фото:</label>
+                <input type="file" id="markerPhoto" accept="image/*">
+
+                <button class="btn-map-add" id="btnPlaceMarker" onclick="togglePlaceMode()">📍 Поставить метку</button>
+                <button class="btn-map-remove" id="btnRemoveMarker" onclick="removeLastMarker()" disabled>🗑️ Снять метку</button>
+            </div>
+
+            <div class="map-hint" id="mapHint">
+                🖱️ Кликните по карте в нужном месте, чтобы поставить метку. Нажмите «Отмена» или Esc, чтобы выйти из режима.
+            </div>
+
+            <div class="map-container" id="mapContainer"></div>
+        </section>
+
+        <!-- ===== ПАНЕЛЬ СО ССЫЛКОЙ (под картой) ===== -->
+        <section class="link-panel">
+            <div class="link-panel-text">
+                <span class="link-panel-icon">🌐</span>
+                <div class="link-panel-info">
+                    <div class="link-label">Виртуальный тур</div>
+                    <div class="link-title">Куллаты — 3D-панорама достопримечательности</div>
+                </div>
+            </div>
+            <a href="https://khanalas-vr.ru/kulats/" target="_blank" rel="noopener noreferrer" class="link-panel-btn">
+                <span>🔗</span>
+                <span>Открыть ссылку</span>
+            </a>
+        </section>
+
+        <!-- ===== СЕКЦИЯ: ВИКТОРИНА + ПОДБОР ТУРА ===== -->
+        <section class="activity-panel">
+            <!-- ЛЕВАЯ КОЛОНКА: ВИКТОРИНА -->
+            <div class="activity-col">
+                <h2>🧠 Викторина: знаешь ли ты Хангалас?</h2>
+                <div class="quiz-progress" id="quizProgress">Вопрос 1 из 3 · Правильных: 0</div>
+                <div id="quizContainer"></div>
+                <div id="quizResultWrap"></div>
+            </div>
+
+            <!-- ПРАВАЯ КОЛОНКА: ПОДБОР ТУРИСТИЧЕСКОГО ПРОДУКТА -->
+            <div class="activity-col">
+                <h2>🧳 Подбор туристического продукта</h2>
+                <div class="tour-desc">Отметьте нужные пункты — программа автоматически посчитает стоимость тура.</div>
+                <div id="tourSections"></div>
+                <div class="tour-result">
+                    <div class="tour-result-row">
+                        <span class="tour-result-label">Выбрано пунктов</span>
+                        <span class="tour-result-value" id="tourCount">0</span>
+                    </div>
+                    <div class="tour-result-row">
+                        <span class="tour-result-label">Итоговая стоимость</span>
+                        <span class="tour-result-value" id="tourTotal">0 ₽</span>
+                    </div>
+                </div>
+                <button class="tour-reset-btn" onclick="resetTour()">🗑️ Сбросить выбор</button>
+            </div>
+        </section>
+
+        <!-- ===== ПАНЕЛЬ АВТОРОВ ПРОЕКТА (в самом низу) ===== -->
+        <section class="authors-panel">
+            <h2>✨ Авторы проекта ✨</h2>
+            <div class="authors-grid">
+                <div class="author-card">
+                    <div class="author-role">
+                        <span class="role-icon">👩‍🏫</span>
+                        <span>Автор проекта</span>
+                    </div>
+                    <div class="author-name">Куранова Эльвира Викторовна</div>
+                    <span class="author-icon-big">🌟</span>
+                </div>
+
+                <div class="author-card">
+                    <div class="author-role">
+                        <span class="role-icon">👩‍🏫</span>
+                        <span>Преподаватель кружка</span>
+                    </div>
+                    <div class="author-name">Бочкарева Василина Александровна</div>
+                    <div class="author-sub">Туризм и краеведение</div>
+                    <span class="author-icon-big">🏔️</span>
+                </div>
+
+                <div class="org-card">
+                    <img src="logo.png" alt="Логотип Хангалас" class="org-icon">
+                    <div class="org-info">
+                        <div class="org-label">Организация</div>
+                        <div class="org-name">МАУ ДО ЦДОД и ППС «Хангалас»</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>Сделано с ❤️ для воспитанников <span>«Туристик: юные туристы и краеведы»</span> · 2026</footer>
+    <div class="toast" id="toast"></div>
+
+    <!-- ===== АЛЬБОМ ДЕТЕЙ ===== -->
+    <div class="kids-album" id="kidsAlbum">
+        <div class="kids-album-header" onclick="toggleKidsAlbum()">
+            <div class="title">
+                <span>👦</span>
+                <span>Альбом детей</span>
+            </div>
+            <span class="toggle-icon">◀</span>
+        </div>
+        <div class="kids-album-body">
+            <div class="album-count" id="kidsCount">Фото: 0</div>
+            <button class="album-upload-btn" onclick="document.getElementById('kidsFileInput').click()">📷 Загрузить фото детей</button>
+            <input type="file" id="kidsFileInput" accept="image/*" multiple style="display:none" onchange="uploadKidsPhotos(this)">
+            <div class="kids-photo-grid" id="kidsPhotoGrid">
+                <div class="kids-empty">Пока нет фото. Загрузите первые!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== МОДУЛИ ===== -->
+    <div class="modules-panel" id="modulesPanel">
+        <div class="modules-panel-header" onclick="toggleModulesPanel()">
+            <div class="title">
+                <span>📚</span>
+                <span>Модули обучения</span>
+            </div>
+            <span class="toggle-icon">▶</span>
+        </div>
+        <div class="modules-panel-body">
+            <div class="info">Пройденные модули · лекции и материалы</div>
+            <div id="modulesList"></div>
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=ВАШ_API_КЛЮЧ" type="text/javascript"></script>
+    <script>
+        // ==================== БАЗА ДАННЫХ INDEXEDDB ====================
+        let db = null;
+
+        function initDB() {
+            const request = indexedDB.open('TouristAppDB', 1);
+            request.onupgradeneeded = (e) => {
+                const database = e.target.result;
+                if (!database.objectStoreNames.contains('photos')) {
+                    database.createObjectStore('photos', { keyPath: 'id' });
+                }
+            };
+            request.onsuccess = (e) => {
+                db = e.target.result;
+                restoreAllPhotos();
+            };
+            request.onerror = (e) => console.error('Ошибка БД:', e.target.error);
+        }
+
+        function savePhotoToDB(id, blob) {
+            if (!db) return;
+            const tx = db.transaction(['photos'], 'readwrite');
+            tx.objectStore('photos').put({ id: id, image: blob });
+        }
+
+        function deletePhotoFromDB(id) {
+            if (!db) return;
+            const tx = db.transaction(['photos'], 'readwrite');
+            tx.objectStore('photos').delete(id);
+        }
+
+        function restoreAllPhotos() {
+            if (!db) return;
+            const tx = db.transaction(['photos'], 'readonly');
+            const request = tx.objectStore('photos').getAll();
+            request.onsuccess = () => {
+                request.result.forEach(item => {
+                    const card = document.getElementById(item.id);
+                    if (card) {
+                        const photoArea = card.querySelector('.photo-area');
+                        if (photoArea) {
+                            const url = URL.createObjectURL(item.image);
+                            photoArea.innerHTML = `<img src="${url}" alt="Фото">`;
+                            const newInput = document.createElement('input');
+                            newInput.type = 'file';
+                            newInput.accept = 'image/*';
+                            newInput.style.cssText = 'position:absolute;inset:0;opacity:0;cursor:pointer;';
+                            newInput.addEventListener('change', function() { loadPhoto(this, item.id); });
+                            photoArea.appendChild(newInput);
+                        }
+                    }
+                });
+            };
+        }
+
+        // ==================== СПИСОК ДОСТОПРИМЕЧАТЕЛЬНОСТЕЙ ====================
+        const SIGHTS = [
+            'Ленские столбы', 'Водопад Кюрюлюр', 'Булус', 'Бизонарий', 'Тукуланы',
+            'Турук Хая', 'Синские столбы', 'Куллаты', 'Краеведческий музей им. Г.В. Ксенофонтова'
+        ];
+
+        let selectedSight = '';
+        let cardCounter = 0;
+        let markerCounter = 0;
+        let myMap = null;
+        let kidsPhotos = [];
+        let placeMode = false;
+        let pendingPhotoSrc = null;
+        let pendingPlaceName = null;
+        let placedMarkers = [];
+
+        let modules = [
+            { id: 'mod1', title: 'Модуль 1. Ленские столбы', desc: 'Природный парк, геология, легенды. Лекция о скальных образованиях на реке Лена.', materials: [], open: false },
+            { id: 'mod2', title: 'Модуль 2. Водопад Кюрюлюр', desc: 'Живописный водопад, природа, экология. Лекция об уникальном природном объекте улуса.', materials: [], open: false },
+            { id: 'mod3', title: 'Модуль 3. Куллаты', desc: 'Живописное место, 3D-панорама, история и культура. Лекция о достопримечательности Хангаласа.', materials: [], open: false },
+            { id: 'mod4', title: 'Модуль 4. Тукуланы', desc: 'Песчаные дюны среди тайги, климат и ландшафт. Лекция о загадочных песках Якутии.', materials: [], open: false },
+            { id: 'mod5', title: 'Модуль 5. Турук Хая', desc: 'Скалы на реке Лене, история и предания. Лекция о живописном месте Хангаласа.', materials: [], open: false }
+        ];
+
+        const marqueeItems = [
+            { emoji: '🏔️', text: 'Горы зовут!' }, { emoji: '⛺', text: 'Ночёвка в палатке' },
+            { emoji: '🔥', text: 'Костёр и песни' }, { emoji: '🧭', text: 'Учимся ориентироваться' },
+            { emoji: '🥾', text: 'Походы выходного дня' }, { emoji: '🌲', text: 'Лесные тропы' },
+            { emoji: '📸', text: 'Фото на память' }, { emoji: '🚩', text: 'Слёты и соревнования' },
+            { emoji: '🌄', text: 'Рассвет в горах' }, { emoji: '🎒', text: 'Собираем рюкзак' }
+        ];
+
+        function initMarquee() {
+            const container = document.getElementById('marquee');
+            const allItems = [...marqueeItems, ...marqueeItems];
+            container.innerHTML = allItems.map(item => `
+                <div class="marquee-item"><span class="emoji-big">${item.emoji}</span><span>${item.text}</span></div>
+            `).join('');
+        }
+
+        // ==================== ВЫПАДАЮЩИЙ СПИСОК ====================
+        function initSightDropdown() {
+            const menu = document.getElementById('sightDropdownMenu');
+            menu.innerHTML = SIGHTS.map(s => `
+                <div class="sight-option" data-sight="${s}" onclick="selectSight('${s.replace(/'/g, "\\'")}')">
+                    <span class="opt-icon">📍</span><span>${s}</span>
+                </div>
+            `).join('');
+        }
+
+        function toggleSightDropdown(ev) {
+            if (ev) ev.stopPropagation();
+            document.getElementById('sightDropdown').classList.toggle('open');
+        }
+
+        function selectSight(sight) {
+            selectedSight = sight;
+            document.getElementById('sightBtnLabel').textContent = sight;
+            document.querySelectorAll('.sight-option').forEach(el => {
+                el.classList.toggle('selected', el.dataset.sight === sight);
+            });
+            document.getElementById('sightDropdown').classList.remove('open');
+        }
+
+        document.addEventListener('click', function(e) {
+            const dd = document.getElementById('sightDropdown');
+            if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+        });
+
+        // ==================== КАРТОЧКИ ГАЛЕРЕИ ====================
+        // Создание карточки (с возможностью подставить фото и описание)
+        function createCard(predefinedImageUrl = null, predefinedDesc = null) {
+            cardCounter++;
+            const id = 'card-' + cardCounter;
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.id = id;
+
+            // Определяем содержимое фото-области
+            let photoContent = `<div class="placeholder-icon"><span>📷</span><p>Нажмите, чтобы выбрать фото</p></div>`;
+            if (predefinedImageUrl) {
+                photoContent = `<img src="${predefinedImageUrl}" alt="Фото">`;
+            }
+
+            card.innerHTML = `
+                <div class="card-header">
+                    <span class="card-number">${cardCounter}</span>
+                    <button class="btn-delete" onclick="removeCard('${id}')" title="Удалить">✕</button>
+                </div>
+                <div class="photo-area" onclick="this.querySelector('input').click()">
+                    ${photoContent}
+                    <input type="file" accept="image/*" onchange="loadPhoto(this, '${id}')">
+                </div>
+                <div class="card-body">
+                    <label>Описание:</label>
+                    <textarea placeholder="Напишите, где сделано фото...">${predefinedDesc || 'Наше удивительное путешествие...'}</textarea>
+                </div>`;
+
+            document.getElementById('gallery').appendChild(card);
+        }
+
+        function addCard() { createCard(); showToast('✅ Добавлена карточка'); }
+
+        function removeCard(id) {
+            const c = document.getElementById(id);
+            if (c) {
+                deletePhotoFromDB(id); // Удаляем фото из базы
+                c.style.opacity = '0';
+                setTimeout(() => c.remove(), 250);
+                showToast('🗑️ Удалено');
+            }
+        }
+
+        function loadPhoto(input, cardId) {
+            const file = input.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const photoArea = document.querySelector(`#${cardId} .photo-area`);
+                photoArea.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+                const newInput = document.createElement('input');
+                newInput.type = 'file'; newInput.accept = 'image/*';
+                newInput.style.cssText = 'position:absolute;inset:0;opacity:0;cursor:pointer;';
+                newInput.addEventListener('change', function() { loadPhoto(this, cardId); });
+                photoArea.appendChild(newInput);
+                
+                // Сохраняем в базу данных
+                savePhotoToDB(cardId, file); 
+            };
+            reader.readAsDataURL(file);
+            showToast('📸 Фото загружено');
+        }
+
+        // ==================== КАРТА ====================
+        function initMap() {
+            myMap = new ymaps.Map('mapContainer', {
+                center: [61.4842, 129.1322], zoom: 7,
+                controls: ['zoomControl', 'fullscreenControl', 'searchControl']
+            });
+            myMap.controls.get('searchControl').options.set('noPlacemark', true);
+            myMap.events.add('click', function(e) {
+                if (!placeMode) return;
+                placeMarkerAt(e.get('coords'));
+            });
+            updateMapCursor();
+            updateRemoveButton();
+        }
+
+        function updateMapCursor() {
+            if (!myMap) return;
+            myMap.container.getElement().style.cursor = placeMode ? 'crosshair' : '';
+        }
+
+        function updateRemoveButton() {
+            document.getElementById('btnRemoveMarker').disabled = placedMarkers.length === 0;
+        }
+
+        function togglePlaceMode() {
+            if (!myMap) { showToast('⏳ Карта ещё загружается'); return; }
+            if (placeMode) { cancelPlaceMode(); return; }
+            const photoInput = document.getElementById('markerPhoto');
+            if (!selectedSight) { showToast('⚠️ Сначала выберите достопримечательность'); return; }
+            const file = photoInput.files[0];
+            if (!file) { showToast('⚠️ Сначала загрузите фото для метки'); return; }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                pendingPhotoSrc = e.target.result;
+                pendingPlaceName = selectedSight;
+                placeMode = true;
+                const btn = document.getElementById('btnPlaceMarker');
+                btn.textContent = '✖ Отмена';
+                btn.classList.add('active');
+                document.getElementById('mapHint').classList.add('show');
+                updateMapCursor();
+                showToast('🖱️ Кликните по карте, чтобы поставить метку');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function cancelPlaceMode() {
+            placeMode = false; pendingPhotoSrc = null; pendingPlaceName = null;
+            const btn = document.getElementById('btnPlaceMarker');
+            btn.textContent = '📍 Поставить метку';
+            btn.classList.remove('active');
+            document.getElementById('mapHint').classList.remove('show');
+            updateMapCursor();
+            showToast('❌ Режим установки отменён');
+        }
+
+        function placeMarkerAt(coords) {
+            if (!pendingPhotoSrc || !pendingPlaceName) return;
+            const placemark = createYandexPlacemark(pendingPlaceName, coords, pendingPhotoSrc);
+            placedMarkers.push(placemark);
+            updateRemoveButton();
+            const name = pendingPlaceName;
+            document.getElementById('markerPhoto').value = '';
+            selectedSight = '';
+            document.getElementById('sightBtnLabel').textContent = 'Достопримечательности';
+            document.querySelectorAll('.sight-option').forEach(el => el.classList.remove('selected'));
+            cancelPlaceMode();
+            showToast('📍 Метка «' + name + '» установлена');
+        }
+
+        function createYandexPlacemark(name, coords, photoSrc) {
+            markerCounter++;
+            const placemark = new ymaps.Placemark(coords, {
+                hintContent: name,
+                balloonContent: `<div style="text-align:center; padding:5px; font-family:'Times New Roman', Times, serif;">
+                    <img src="${photoSrc}" style="width:120px; height:90px; object-fit:cover; border-radius:8px; margin-bottom:8px;"><br>
+                    <strong>${name}</strong><br><span style="font-size:0.8rem; color:#666;">Метка №${markerCounter}</span>
+                </div>`
+            }, {
+                iconLayout: 'default#image', iconImageHref: photoSrc,
+                iconImageSize: [50, 50], iconImageOffset: [-25, -50], iconImageHover: false
+            });
+            myMap.geoObjects.add(placemark);
+            return placemark;
+        }
+
+        function removeLastMarker() {
+            if (!myMap || placedMarkers.length === 0) { showToast('⚠️ На карте нет меток'); return; }
+            const last = placedMarkers.pop();
+            myMap.geoObjects.remove(last);
+            updateRemoveButton();
+            showToast('🗑️ Метка снята с карты');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (placeMode) cancelPlaceMode();
+                const dd = document.getElementById('sightDropdown');
+                if (dd) dd.classList.remove('open');
+            }
+        });
+
+        // ==================== АЛЬБОМ ДЕТЕЙ ====================
+        function toggleKidsAlbum() { document.getElementById('kidsAlbum').classList.toggle('collapsed'); }
+
+        // Обновлённая функция загрузки фото детей с сохранением в БД
+        function uploadKidsPhotos(input) {
+            const files = Array.from(input.files);
+            if (files.length === 0) return;
+            let loaded = 0;
+            const total = files.filter(f => f.type.startsWith('image/')).length;
+            if (total === 0) return;
+            
+            files.forEach((file, index) => {
+                if (!file.type.startsWith('image/')) return;
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const uniqueId = 'kid-' + Date.now() + '-' + index; // Уникальный ID для базы
+                    const photoObj = { id: uniqueId, name: file.name, dataUrl: e.target.result };
+                    kidsPhotos.push(photoObj);
+                    
+                    // Сохраняем в IndexedDB
+                    savePhotoToDB(uniqueId, file);
+                    
+                    loaded++;
+                    if (loaded === total) { renderKidsPhotos(); showToast(`📷 Загружено фото детей: ${loaded}`); }
+                };
+                reader.readAsDataURL(file);
+            });
+            input.value = '';
+        }
+
+        function renderKidsPhotos() {
+            const grid = document.getElementById('kidsPhotoGrid');
+            document.getElementById('kidsCount').textContent = 'Фото: ' + kidsPhotos.length;
+            if (kidsPhotos.length === 0) {
+                grid.innerHTML = '<div class="kids-empty">Пока нет фото. Загрузите первые!</div>';
+                return;
+            }
+            grid.innerHTML = kidsPhotos.map((p, idx) => `
+                <div class="kids-photo">
+                    <img src="${p.dataUrl}" alt="${p.name}" title="${p.name}">
+                    <button class="btn-remove-kid" onclick="removeKidPhoto(${idx})" title="Удалить">✕</button>
+                </div>
+            `).join('');
+        }
+
+        function removeKidPhoto(index) {
+            const p = kidsPhotos[index];
+            if (p && p.id) deletePhotoFromDB(p.id);
+            kidsPhotos.splice(index, 1); 
+            renderKidsPhotos(); 
+            showToast('🗑️ Фото удалено');
+        }
+
+        // ==================== МОДУЛИ ====================
+        function toggleModulesPanel() { document.getElementById('modulesPanel').classList.toggle('collapsed'); }
+
+        function renderModules() {
+            const list = document.getElementById('modulesList');
+            list.innerHTML = modules.map((mod) => `
+                <div class="module-item ${mod.open ? 'open' : ''}" id="${mod.id}">
+                    <div class="module-header" onclick="toggleModule('${mod.id}')">
+                        <div class="module-title"><span>📖</span><span>${mod.title}</span></div>
+                        <span class="module-arrow">▶</span>
+                    </div>
+                    <div class="module-body">
+                        <div class="module-desc">${mod.desc}</div>
+                        <div class="module-materials">
+                            ${mod.materials.length === 0 ? '<div style="font-size:0.72rem;color:#a7f3d0;text-align:center;padding:5px 0;">Материалы не загружены</div>' : ''}
+                            ${mod.materials.map((m, mi) => `
+                                <div class="material-item">
+                                    <span class="mat-icon">${getMatIcon(m.name)}</span>
+                                    <span class="mat-name" title="${m.name}">${m.name}</span>
+                                    <div class="mat-actions">
+                                        <button class="mat-btn" onclick="downloadMaterial('${mod.id}', ${mi})" title="Скачать">⬇</button>
+                                        <button class="mat-btn danger" onclick="removeMaterial('${mod.id}', ${mi})" title="Удалить">✕</button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="module-upload">
+                            <input type="file" id="upload-${mod.id}" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt,.jpg,.png">
+                            <button class="btn-up" onclick="uploadMaterial('${mod.id}')">📎 Загрузить</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getMatIcon(name) {
+            const ext = (name.split('.').pop() || '').toLowerCase();
+            if (ext === 'pdf') return '📕';
+            if (ext === 'doc' || ext === 'docx') return '📄';
+            if (ext === 'ppt' || ext === 'pptx') return '📊';
+            if (ext === 'jpg' || ext === 'jpeg' || ext === 'png') return '🖼️';
+            return '📁';
+        }
+
+        function toggleModule(id) {
+            const mod = modules.find(m => m.id === id);
+            if (!mod) return;
+            mod.open = !mod.open;
+            document.getElementById(id).classList.toggle('open');
+        }
+
+        function uploadMaterial(modId) {
+            const input = document.getElementById('upload-' + modId);
+            const file = input.files[0];
+            if (!file) { showToast('⚠️ Выберите файл'); return; }
+            const mod = modules.find(m => m.id === modId);
+            if (!mod) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                mod.materials.push({ name: file.name, dataUrl: e.target.result, type: file.type });
+                renderModules();
+                showToast('📎 Материал загружен: ' + file.name);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function downloadMaterial(modId, index) {
+            const mod = modules.find(m => m.id === modId);
+            if (!mod || !mod.materials[index]) return;
+            const m = mod.materials[index];
+            const link = document.createElement('a');
+            link.href = m.dataUrl; link.download = m.name;
+            document.body.appendChild(link); link.click(); document.body.removeChild(link);
+            showToast('💾 Файл сохранён');
+        }
+
+        function removeMaterial(modId, index) {
+            const mod = modules.find(m => m.id === modId);
+            if (!mod) return;
+            mod.materials.splice(index, 1);
+            renderModules();
+            showToast('🗑️ Материал удалён');
+        }
+
+        // ==================== ВИКТОРИНА ====================
+        const QUIZ_QUESTIONS = [
+            { question: 'Какое природное образование является визитной карточкой Хангаласского улуса?', options: ['Ленские столбы', 'Водопад Кюрюлюр', 'Озеро Байкал', 'Гора Эльбрус'], correct: 0 },
+            { question: 'Как называется административный центр Хангаласского улуса?', options: ['Покровск', 'Якутск', 'Мохсоголлох', 'Оймякон'], correct: 0 },
+            { question: 'Какая река протекает через Хангаласский улус?', options: ['Лена', 'Обь', 'Енисей', 'Амур'], correct: 0 }
+        ];
+
+        let quizAnswers = [];
+
+        function initQuiz() { quizAnswers = new Array(QUIZ_QUESTIONS.length).fill(null); renderQuiz(); }
+
+        function renderQuiz() {
+            const container = document.getElementById('quizContainer');
+            const progress = document.getElementById('quizProgress');
+            const resultWrap = document.getElementById('quizResultWrap');
+            const finished = quizAnswers.every(a => a !== null);
+            if (finished) {
+                const correctCount = quizAnswers.filter((a, i) => a === QUIZ_QUESTIONS[i].correct).length;
+                container.innerHTML = QUIZ_QUESTIONS.map((q, qi) => {
+                    const selected = quizAnswers[qi];
+                    return `<div class="quiz-question"><div class="q-text">${qi + 1}. ${q.question}</div><div class="q-options">
+                        ${q.options.map((opt, oi) => {
+                            let cls = 'quiz-option disabled';
+                            if (oi === q.correct) cls += ' correct'; else if (oi === selected) cls += ' wrong';
+                            return `<div class="${cls}"><span class="opt-letter">${String.fromCharCode(65 + oi)}</span><span>${opt}</span></div>`;
+                        }).join('')}
+                    </div></div>`;
+                }).join('');
+                progress.textContent = `Правильных ответов: ${correctCount} из ${QUIZ_QUESTIONS.length}`;
+                let comment = correctCount === QUIZ_QUESTIONS.length ? '🌟 Отлично! Ты настоящий знаток Хангаласа!' : (correctCount >= 2 ? '👍 Хороший результат! Есть куда расти.' : '📚 Стоит ещё раз изучить материалы модулей.');
+                resultWrap.innerHTML = `<div class="quiz-result"><div class="res-score">${correctCount} / ${QUIZ_QUESTIONS.length}</div><div class="res-text">${comment}</div><button class="quiz-reset-btn" onclick="resetQuiz()">🔄 Пройти заново</button></div>`;
+                return;
+            }
+            const answeredCount = quizAnswers.filter(a => a !== null).length;
+            const correctCount = quizAnswers.filter((a, i) => a !== null && a === QUIZ_QUESTIONS[i].correct).length;
+            progress.textContent = `Отвечено: ${answeredCount} из ${QUIZ_QUESTIONS.length} · Правильных: ${correctCount}`;
+            container.innerHTML = QUIZ_QUESTIONS.map((q, qi) => {
+                const selected = quizAnswers[qi];
+                return `<div class="quiz-question"><div class="q-text">${qi + 1}. ${q.question}</div><div class="q-options">
+                    ${q.options.map((opt, oi) => {
+                        let cls = 'quiz-option';
+                        if (selected !== null) { cls += ' disabled'; if (oi === q.correct) cls += ' correct'; else if (oi === selected) cls += ' wrong'; }
+                        return `<div class="${cls}" onclick="answerQuestion(${qi}, ${oi})"><span class="opt-letter">${String.fromCharCode(65 + oi)}</span><span>${opt}</span></div>`;
+                    }).join('')}
+                </div></div>`;
+            }).join('');
+            resultWrap.innerHTML = '';
+        }
+
+        function answerQuestion(qIndex, oIndex) {
+            if (quizAnswers[qIndex] !== null) return;
+            quizAnswers[qIndex] = oIndex;
+            renderQuiz();
+        }
+
+        function resetQuiz() { initQuiz(); showToast('🔄 Викторина начата заново'); }
+
+        // ==================== ПОДБОР ТУРА ====================
+        const TOUR_DATA = [
+            { id: 'transfer', title: 'Трансфер', icon: '🚌', items: [
+                { id: 't1', name: 'Автобус (группа до 20 чел.)', price: 5000 }, { id: 't2', name: 'Минивэн (до 8 чел.)', price: 3500 },
+                { id: 't3', name: 'Индивидуальный автомобиль', price: 2500 }, { id: 't4', name: 'Вертолётная заброска', price: 45000 }
+            ]},
+            { id: 'lodging', title: 'Размещение', icon: '🏕️', items: [
+                { id: 'l1', name: 'Палатка (2-местная)', price: 500 }, { id: 'l2', name: 'Гостевой дом', price: 1500 },
+                { id: 'l3', name: 'Гостиница (стандарт)', price: 3000 }, { id: 'l4', name: 'Эко-лодж на природе', price: 4500 }
+            ]},
+            { id: 'food', title: 'Питание', icon: '🍲', items: [
+                { id: 'f1', name: 'Сухой паёк на 1 день', price: 400 }, { id: 'f2', name: 'Полевая кухня (завтрак+ужин)', price: 900 },
+                { id: 'f3', name: 'Полный пансион (3-раз.)', price: 1800 }, { id: 'f4', name: 'Национальная кухня (дегустация)', price: 1200 }
+            ]},
+            { id: 'leisure', title: 'Досуг', icon: '🎣', items: [
+                { id: 'd1', name: 'Экскурсия к Ленским столбам', price: 2000 }, { id: 'd2', name: 'Рыбалка на Лене', price: 1500 },
+                { id: 'd3', name: 'Сплав по реке', price: 3500 }, { id: 'd4', name: 'Фотоохота / наблюдение за природой', price: 1000 }
+            ]},
+            { id: 'memo', title: 'Памятка при создании туристического маршрута', icon: '📋', items: [
+                { id: 'm1', name: 'Учитывать сезонность и погоду', price: 0 }, { id: 'm2', name: 'Согласовать маршрут с МЧС', price: 0 },
+                { id: 'm3', name: 'Сообщить о выходе на маршрут', price: 0 }, { id: 'm4', name: 'Взять аптечку и связь', price: 0 },
+                { id: 'm5', name: 'Соблюдать правила безопасности', price: 0 }, { id: 'm6', name: 'Не оставлять мусор на природе', price: 0 }
+            ]}
+        ];
+
+        let selectedTourItems = new Set();
+        let openTourSections = new Set(['transfer']);
+
+        function initTour() { renderTour(); }
+
+        function toggleTourSection(id) {
+            if (openTourSections.has(id)) openTourSections.delete(id); else openTourSections.add(id);
+            renderTour();
+        }
+
+        function renderTour() {
+            const container = document.getElementById('tourSections');
+            container.innerHTML = TOUR_DATA.map(sec => {
+                const isOpen = openTourSections.has(sec.id);
+                return `<div class="tour-section ${isOpen ? 'open' : ''}">
+                    <div class="tour-section-header" onclick="toggleTourSection('${sec.id}')">
+                        <div class="tour-sec-title"><span class="tour-sec-icon">${sec.icon}</span><span>${sec.title}</span></div>
+                        <span class="tour-arrow">▶</span>
+                    </div>
+                    <div class="tour-section-body">
+                        ${sec.items.map(item => {
+                            const isSel = selectedTourItems.has(item.id);
+                            return `<div class="tour-item ${isSel ? 'selected' : ''}" onclick="toggleTourItem('${item.id}')">
+                                <div class="tour-check">✓</div>
+                                <div class="tour-item-info"><div class="tour-item-name">${item.name}</div><div class="tour-item-price">${item.price > 0 ? item.price + ' ₽' : 'бесплатно'}</div></div>
+                            </div>`;
+                        }).join('')}
+                    </div>
+                </div>`;
+            }).join('');
+            updateTourTotals();
+        }
+
+        function toggleTourItem(id) {
+            if (selectedTourItems.has(id)) selectedTourItems.delete(id); else selectedTourItems.add(id);
+            renderTour();
+        }
+
+        function updateTourTotals() {
+            let total = 0, count = 0;
+            TOUR_DATA.forEach(sec => sec.items.forEach(item => {
+                if (selectedTourItems.has(item.id)) { total += item.price; count++; }
+            }));
+            document.getElementById('tourCount').textContent = count;
+            document.getElementById('tourTotal').textContent = total.toLocaleString('ru-RU') + ' ₽';
+        }
+
+        function resetTour() {
+            if (selectedTourItems.size === 0) { showToast('⚠️ Пока ничего не выбрано'); return; }
+            selectedTourItems.clear(); renderTour(); showToast('🗑️ Выбор сброшен');
+        }
+
+        // ==================== УВЕДОМЛЕНИЯ ====================
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => toast.classList.remove('show'), 2200);
+        }
+
+        // ==================== ИНИЦИАЛИЗАЦИЯ ====================
+        document.addEventListener('DOMContentLoaded', function() {
+            initDB();
+            initMarquee();
+            initSightDropdown();
+
+            // Создаём первые карточки галереи
+            createCard('lenskie_stolby.jpg', 'Ленские столбы — величественное природное образование на реке Лена, визитная карточка Хангаласского улуса.');
+            createCard('tukulany.jpg', 'Тукуланы — уникальные песчаные дюны среди якутской тайги, удивительный ландшафт Хангаласского улуса.');
+            createCard('bulus.jpg', 'Ледник Булуус — уникальное природное явление, огромные глыбы льда, которые не тают даже летом. Одно из самых популярных мест Хангаласского улуса.');
+
+            // ДОБАВЛЯЕМ ФОТОГРАФИИ ДЕТЕЙ (8 штук) В АЛЬБОМ И БАЗУ
+            const kidImages = [
+                'kid1.jpg', 'kid2.jpg', 'kid3.jpg', 'kid4.jpg', 'kid5.jpg', 'kid6.jpg', 'kid7.jpg', 'kid8.jpg'
+            ];
+            
+            kidImages.forEach((fileName, index) => {
+                const uniqueId = 'kid-init-' + index;
+                kidsPhotos.push({ id: uniqueId, name: fileName, dataUrl: fileName });
+                
+                fetch(fileName)
+                    .then(res => res.blob())
+                    .then(blob => {
+                        savePhotoToDB(uniqueId, blob);
+                    })
+                    .catch(err => console.log('Файл ' + fileName + ' не найден. Убедитесь, что он лежит в папке.'));
+            });
+
+            // ЗАГРУЖАЕМ ДОКУМЕНТ В МОДУЛЬ 3
+            const docName = 'Куллаты .docx';
+            const docId = 'doc-mod3';
+            // Добавляем в массив модулей
+            const mod3 = modules.find(m => m.id === 'mod3');
+            if (mod3) {
+                mod3.materials.push({ id: docId, name: docName, dataUrl: docName });
+            }
+
+            // Сохраняем документ в базу данных (как Blob)
+            fetch(docName)
+                .then(res => {
+                    if (!res.ok) throw new Error('Файл не найден');
+                    return res.blob();
+                })
+                .then(blob => {
+                    savePhotoToDB(docId, blob);
+                    console.log('Документ ' + docName + ' успешно сохранён в базу.');
+                })
+                .catch(err => console.log('Документ не найден в папке. Убедитесь, что файл "' + docName + '" лежит рядом с index.html.'));
+
+            renderKidsPhotos();
+            renderModules();
+            initQuiz();
+            initTour();
+            ymaps.ready(initMap);
+        });
+    </script>
+</body>
+</html>
